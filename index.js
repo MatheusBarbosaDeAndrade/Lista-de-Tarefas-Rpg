@@ -7,7 +7,7 @@ const nivelElement = document.getElementById('nivel');
 
 let itensDB = [];
 let xp = 0;
-let level = parseInt(localStorage.getItem('level')); // Carrega o nível salvo no armazenamento local ou define como 1 se não houver nenhum
+let level = parseInt(localStorage.getItem('level')) || 1; // Carrega o nível salvo no armazenamento local ou define como 1 se não houver nenhum
 
 const XP_TO_LEVEL_UP = 100;
 const MAX_LEVEL = 10; // Define o nível máximo
