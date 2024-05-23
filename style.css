@@ -17,7 +17,84 @@ body {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
+nav.menu-lateral {
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(36, 41, 45, 0.8);
+  padding: 20px 0 40px 1%;
+  z-index: 1000;
+  box-shadow: 3px 0 0 #8257f3;
+  overflow: hidden;
+  transition: width 0.5s; /* Adiciona transição para a largura */
+}
+
+nav.menu-lateral:hover {
+  width: 200px; /* Largura expandida */
+}
+
+.btn-expandir {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn-expandir > i {
+  color: aliceblue;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ul {
+  height: 48%;
+  list-style-type: none;
+  transition: all 0.5s; /* Adiciona transição para os itens da lista */
+}
+
+ul li.item-menu:hover {
+  background: #8257f3;
+}
+
+ul li.item-menu {
+  transition: background 0.5s; /* Adiciona transição para o fundo dos itens */
+}
+
+ul li.ativo {
+  background-color: #8257f3;
+}
+
+ul li.item-menu a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 10px;
+  padding: 20px 4%;
+  display: flex;
+  line-height: 40px;
+  transition: all 0.5s; /* Adiciona transição para os itens da lista */
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 70px;
+  transition: all 0.5s; /* Adiciona transição para os textos dos itens */
+  opacity: 0;
+}
+
+nav.menu-lateral:hover .txt-link {
+  margin-left: 20px;
+  opacity: 1;
+}
+
+ul li.item-menu a .Icon > i {
+  font-size: 30px;
+}
+
+/* Restante dos estilos permanecem iguais */
+
 
 h1 {
   display: flex;
@@ -35,8 +112,7 @@ span {
 
 ul {
   display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
 
 .header button {
@@ -44,14 +120,13 @@ ul {
   right: 18%;
   margin-top: -30px;
   color: #e8eff2;
-} 
+}
 
 .header i {
   font-size: 22px;
-} 
+}
 
 .to-do {
-
   margin-top: 40px;
   width: 60%;
 }
@@ -73,42 +148,41 @@ ul {
 }
 
 button {
-  width: 10%;
+  width: 5%;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
 }
 
-.container{
-    margin: 70px;
-    width: 55%;
-    background-color: rgba(36, 41, 45, 0.364);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    min-height: 500px;
-    overflow: auto;
+.container {
+  margin: 70px;
+  width: 55%;
+  background-color: rgba(36, 41, 45, 0.364);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  min-height: 500px;
+  overflow: auto;
 }
 
 .fundo-to-do {
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    width: 100%;
-    padding-top: 10px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 100%;
+  padding-top: 10px;
 }
 
 .bx-plus {
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 30%;
   background-color: rgb(139, 14, 223);
   border-radius: 50%;
   padding: 5px;
   color: white;
 }
 
-.progress-area, h2{
+.progress-area, h2 {
   color: #e8eff2;
   text-align: center;
   font-size: 15px;
@@ -125,11 +199,10 @@ button {
 
 .progress-bar {
   height: 20px;
-  background-color: #91e894; /* Cor de fundo da barra de progresso */
-  width: 0%; /* Inicialmente, a largura é 0% */
+  background-color: #91e894;
+  width: 0%;
   border-radius: 10px;
 }
-
 
 .divLi {
   margin-top: 20px;
@@ -142,7 +215,7 @@ button {
 }
 
 .divLi span {
-  width: 80%;
+  width: 70%;
   color: dimgray;
 }
 
