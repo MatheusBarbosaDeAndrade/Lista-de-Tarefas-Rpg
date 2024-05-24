@@ -70,8 +70,8 @@ function setItemDB() {
 
 function updateDB() {
   localStorage.setItem('todolist', JSON.stringify(itensDB));
-  localStorage.setItem('level', level); // Salva o nível no armazenamento local
-  loadItemsAndLevel(); // Atualiza tanto os itens quanto o nível após salvar
+  localStorage.setItem('level', level); 
+  loadItemsAndLevel();
 }
 
 
@@ -81,12 +81,12 @@ function loadItemsAndLevel() {
 }
 
 function loadLevel() {
-  // Carrega o nível salvo no armazenamento local
+  
   level = parseInt(localStorage.getItem('level')) || level;
   nivelElement.textContent = level;
 }
 
-// Chama a função para carregar o nível quando a página é carregada
+
 window.addEventListener('load', loadLevel);
 
 function loadItens() {
@@ -126,15 +126,15 @@ function missTask(index) {
   }
   nivelElement.textContent = level;
   updateProgressBar();
-  itensDB.splice(index, 1); // Remove o item da lista
-  updateDB(); // Atualiza os dados no armazenamento local e recarrega a lista de itens
+  itensDB.splice(index, 1); 
+  updateDB(); 
 }
 
 function done(chk, i) {
   if (chk.checked) {
     const item = itensDB[i];
-    itensDB.splice(i, 1); // Remove o item da lista
-    updateDB(); // Atualiza os dados no armazenamento local e recarrega a lista de itens
+    itensDB.splice(i, 1); 
+    updateDB(); 
     const difficultyXP = xpPerDifficulty[item.difficulty];
     xp += difficultyXP;
     if (xp >= XP_TO_LEVEL_UP) {
@@ -147,7 +147,7 @@ function done(chk, i) {
   } else {
     itensDB[i].status = ''; 
     updateProgressBar();
-    updateDB(); // Atualiza os dados no armazenamento local e recarrega a lista de itens
+    updateDB(); 
   }
 }
 

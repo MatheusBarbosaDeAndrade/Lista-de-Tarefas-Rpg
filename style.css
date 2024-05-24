@@ -32,11 +32,11 @@ nav.menu-lateral {
   z-index: 1000;
   box-shadow: 3px 0 0 #8257f3;
   overflow: hidden;
-  transition: width 0.5s; /* Adiciona transição para a largura */
+  transition: width 0.5s; 
 }
 
 nav.menu-lateral:hover {
-  width: 200px; /* Largura expandida */
+  width: 200px; 
 }
 
 .btn-expandir {
@@ -53,7 +53,7 @@ nav.menu-lateral:hover {
 ul {
   height: 48%;
   list-style-type: none;
-  transition: all 0.5s; /* Adiciona transição para os itens da lista */
+  transition: all 0.5s;
 }
 
 ul li.item-menu:hover {
@@ -61,7 +61,7 @@ ul li.item-menu:hover {
 }
 
 ul li.item-menu {
-  transition: background 0.5s; /* Adiciona transição para o fundo dos itens */
+  transition: background 0.5s;
 }
 
 ul li.ativo {
@@ -75,12 +75,12 @@ ul li.item-menu a {
   padding: 20px 4%;
   display: flex;
   line-height: 40px;
-  transition: all 0.5s; /* Adiciona transição para os itens da lista */
+  transition: all 0.5s; 
 }
 
 ul li.item-menu a .txt-link {
   margin-left: 70px;
-  transition: all 0.5s; /* Adiciona transição para os textos dos itens */
+  transition: all 0.5s; 
   opacity: 0;
 }
 
@@ -93,7 +93,7 @@ ul li.item-menu a .Icon > i {
   font-size: 30px;
 }
 
-/* Restante dos estilos permanecem iguais */
+
 
 
 h1 {
