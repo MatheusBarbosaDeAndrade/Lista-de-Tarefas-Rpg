@@ -1,0 +1,20 @@
+{
+    "name": "Lista de Tarefas: O RPG",
+    "short_name": "ListaRPG",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#8257f3",
+    "theme_color": "#333",
+    "icons":[
+        {
+            "src": "./images/icons8-lista-50.png",
+            "sizes": "50x50",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons8-lista-100.png",
+            "sizes": "100x100",
+            "type": "image/png"
+        }
+    ]
+}
